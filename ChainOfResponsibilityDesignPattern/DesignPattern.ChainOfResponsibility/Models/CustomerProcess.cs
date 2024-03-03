@@ -1,4 +1,6 @@
-﻿namespace DesignPattern.ChainOfResponsibility.Models
+﻿using System;
+
+namespace DesignPattern.ChainOfResponsibility.Models
 {
 	public class CustomerProcess
 	{
@@ -8,5 +10,6 @@
 		public string EmployeeName { get; set; }
 		public string Description { get; set; }
 		public bool IsApproved { get; set; }
+		public DateTime ProcessTime { get; set; }
     }
 }

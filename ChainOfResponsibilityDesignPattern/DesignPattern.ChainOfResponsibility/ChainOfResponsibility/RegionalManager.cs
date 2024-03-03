@@ -1,6 +1,7 @@
 ﻿using DesignPattern.ChainOfResponsibility.Data;
 using DesignPattern.ChainOfResponsibility.Models;
 using DesignPattern.ChainOfResponsibility.ViewModels;
+using System;
 
 namespace DesignPattern.ChainOfResponsibility.ChainOfResponsibility
 {
@@ -17,8 +18,10 @@ namespace DesignPattern.ChainOfResponsibility.ChainOfResponsibility
 				customerProcess.Name = request.Name;
 				customerProcess.EmployeeName = "Bolge Muduru - Zeynep Yilmaz";
 				customerProcess.Description = "Para Cekme Islemi Onaylandi, Musteriye Talep Ettigi Tutar Odendi";
+                customerProcess.IsApproved = true;
+				customerProcess.ProcessTime = DateTime.Now;
 
-				context.CustomerProcesses.Add(customerProcess);
+                context.CustomerProcesses.Add(customerProcess);
 				context.SaveChanges();
 			}
 			else
@@ -29,8 +32,10 @@ namespace DesignPattern.ChainOfResponsibility.ChainOfResponsibility
 				customerProcess.Name = request.Name;
 				customerProcess.EmployeeName = "Bolge Muduru - Zeynep Yilmaz";
 				customerProcess.Description = "Para Cekme Tutari Bolge Mudurunun Gunluk Odeyebilecegi Limiti Astigi Icin Islem Gerceklestirilemedi, Musterinin Gunluk Maksimum Cekebilecegi Tutar 400,000 TL Olup Daha Fazlasi Icin Birden Fazla Gun Subeye Gelmesi Gereklidir";
+                customerProcess.IsApproved = false;
+                customerProcess.ProcessTime = DateTime.Now;
 
-				context.CustomerProcesses.Add(customerProcess);
+                context.CustomerProcesses.Add(customerProcess);
 				context.SaveChanges();
 			}
 		}

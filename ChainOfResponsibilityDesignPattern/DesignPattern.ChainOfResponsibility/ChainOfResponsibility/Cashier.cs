@@ -18,8 +18,10 @@ namespace DesignPattern.ChainOfResponsibility.ChainOfResponsibility
 				customerProcess.Name = request.Name;
 				customerProcess.EmployeeName = "Veznedar - Ayse Cinar";
 				customerProcess.Description = "Para Cekme Islemi Onaylandi, Musteriye Talep Ettigi Tutar Odendi";
+				customerProcess.IsApproved = true;
+                customerProcess.ProcessTime = DateTime.Now;
 
-				context.CustomerProcesses.Add(customerProcess);
+                context.CustomerProcesses.Add(customerProcess);
 				context.SaveChanges();
 			}
             else if (NextApprover != null)
@@ -30,8 +32,10 @@ namespace DesignPattern.ChainOfResponsibility.ChainOfResponsibility
 				customerProcess.Name = request.Name;
 				customerProcess.EmployeeName = "Veznedar - Ayse Cinar";
 				customerProcess.Description = "Para Cekme Tutari Veznedarin Gunluk Odeyebilecegi Limiti Astigi Icin Islem Sube Mudur Yardimcisina Yonlendirildi";
-				
-				context.CustomerProcesses.Add(customerProcess); 
+                customerProcess.IsApproved = false;
+                customerProcess.ProcessTime = DateTime.Now;
+
+                context.CustomerProcesses.Add(customerProcess); 
 				context.SaveChanges();
 
 				NextApprover.ProcessRequest(request);

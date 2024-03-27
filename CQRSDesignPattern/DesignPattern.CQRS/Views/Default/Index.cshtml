@@ -1,0 +1,41 @@
+﻿@model List<DesignPattern.CQRS.CQRSPattern.Results.GetAllProductQueryResult>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <table class="table table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th>Stok</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>@item.Stock</td>
+                    <td><a href="/Default/DeleteProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Default/UpdateProduct/@item.ProductId" class="btn btn-warning">Güncelle</a></td>
+                </tr>
+            }
+        </table>
+        <a href="/Default/AddProduct/" class="btn btn-primary">Yeni Ürün Girişi</a>
+    </div>
+</body>
+</html>

@@ -19,7 +19,7 @@ namespace DesignPattern.CQRS.Handlers
         {
             var values = _context.Products.Find(command.Id);
             
-            values.Status = true;
+            //values.Status = true;
 
             _context.Remove(values);
             _context.SaveChanges();

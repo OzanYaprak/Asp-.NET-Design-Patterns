@@ -1,0 +1,37 @@
+﻿@model DesignPattern.CQRS.Results.GetProductUpdateQueryResult
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>AddProduct</title>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <form asp-controller="Default" asp-action="UpdateProduct" method="post">
+            <label>#</label>
+            <input type="text" class="form-control" asp-for="ProductId" />
+            <br />
+            <label>Ürün Adı</label>
+            <input type="text" class="form-control" asp-for="Name" />
+            <br />
+            <label>Ürün Stok Sayısı</label>
+            <input type="text" class="form-control" asp-for="Stock" />
+            <br />
+            <label>Ürün Fiyatı</label>
+            <input type="text" class="form-control" asp-for="Price" />
+            <br />
+            <label>Ürün Açıklaması</label>
+            <input type="text" class="form-control" asp-for="Description" />
+            <br />
+            <button class="btn btn-success">Ürünü Güncelle</button>
+        </form>
+    </div>
+</body>
+</html>

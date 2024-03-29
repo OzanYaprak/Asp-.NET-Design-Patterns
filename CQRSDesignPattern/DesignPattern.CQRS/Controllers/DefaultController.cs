@@ -13,13 +13,15 @@ namespace DesignPattern.CQRS.Controllers
         private readonly CreateProductCommandHandler _createProductCommandHandler;
         private readonly GetProductByIdQueryHandler _getProductByIdQueryHandler;
         private readonly RemoveProductCommandHandler _removeProductCommandHandler;
+        private readonly GetProductUpdateByIdQueryHandler _getProductUpdateByIdQueryHandler;
 
-        public DefaultController(GetAllProductQueryHandler getAllProductQueryHandler, CreateProductCommandHandler createProductCommandHandler, GetProductByIdQueryHandler productByIdQueryHandler, RemoveProductCommandHandler removeProductCommandHandler)
+        public DefaultController(GetAllProductQueryHandler getAllProductQueryHandler, CreateProductCommandHandler createProductCommandHandler, GetProductByIdQueryHandler productByIdQueryHandler, RemoveProductCommandHandler removeProductCommandHandler, GetProductUpdateByIdQueryHandler getProductUpdateByIdQueryHandler)
         {
             _getAllProductQueryHandler = getAllProductQueryHandler;
             _createProductCommandHandler = createProductCommandHandler;
             _getProductByIdQueryHandler = productByIdQueryHandler;
             _removeProductCommandHandler = removeProductCommandHandler;
+            _getProductUpdateByIdQueryHandler = getProductUpdateByIdQueryHandler;
         }
 
         #endregion
@@ -53,6 +55,13 @@ namespace DesignPattern.CQRS.Controllers
         {
             _removeProductCommandHandler.Handle(new RemoveProductCommand(id));
             return RedirectToAction("Index", "Default");
+        }
+
+        [HttpGet]
+        public IActionResult UpdateProduct(int id)
+        {
+            var values = _getProductUpdateByIdQueryHandler.Handle(new GetProductUpdateByIdQuery(id));
+            return View(values);
         }
     }
 }

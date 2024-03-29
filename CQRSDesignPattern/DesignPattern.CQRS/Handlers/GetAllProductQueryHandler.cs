@@ -1,9 +1,9 @@
-﻿using DesignPattern.CQRS.CQRSPattern.Results;
-using DesignPattern.CQRS.DAL;
+﻿using DesignPattern.CQRS.DAL;
+using DesignPattern.CQRS.Results;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DesignPattern.CQRS.CQRSPattern.Handlers
+namespace DesignPattern.CQRS.Handlers
 {
     public class GetAllProductQueryHandler
     {
@@ -25,7 +25,7 @@ namespace DesignPattern.CQRS.CQRSPattern.Handlers
                 Name = x.Name,
                 Price = x.Price,
                 Stock = x.Stock,
-
+                Status = false
             }).ToList();
 
             return values;

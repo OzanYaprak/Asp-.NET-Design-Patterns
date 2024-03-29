@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DesignPattern.CQRS.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DesignPattern.CQRS.DAL
 {

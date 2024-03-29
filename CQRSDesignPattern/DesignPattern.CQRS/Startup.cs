@@ -1,5 +1,5 @@
-using DesignPattern.CQRS.CQRSPattern.Handlers;
 using DesignPattern.CQRS.DAL;
+using DesignPattern.CQRS.Handlers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +27,9 @@ namespace DesignPattern.CQRS
         {
             services.AddDbContext<DBContext>();
             services.AddScoped<GetAllProductQueryHandler>();
+            services.AddScoped<GetProductByIdQueryHandler>();
+            services.AddScoped<CreateProductCommandHandler>();
+            services.AddScoped<RemoveProductCommandHandler>();
 
             services.AddControllersWithViews();
         }

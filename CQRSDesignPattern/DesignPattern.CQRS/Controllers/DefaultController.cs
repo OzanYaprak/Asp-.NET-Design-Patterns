@@ -14,14 +14,16 @@ namespace DesignPattern.CQRS.Controllers
         private readonly GetProductByIdQueryHandler _getProductByIdQueryHandler;
         private readonly RemoveProductCommandHandler _removeProductCommandHandler;
         private readonly GetProductUpdateByIdQueryHandler _getProductUpdateByIdQueryHandler;
+        private readonly UpdateProductCommandHandler _updateProductCommandHandler;
 
-        public DefaultController(GetAllProductQueryHandler getAllProductQueryHandler, CreateProductCommandHandler createProductCommandHandler, GetProductByIdQueryHandler productByIdQueryHandler, RemoveProductCommandHandler removeProductCommandHandler, GetProductUpdateByIdQueryHandler getProductUpdateByIdQueryHandler)
+        public DefaultController(GetAllProductQueryHandler getAllProductQueryHandler, CreateProductCommandHandler createProductCommandHandler, GetProductByIdQueryHandler productByIdQueryHandler, RemoveProductCommandHandler removeProductCommandHandler, GetProductUpdateByIdQueryHandler getProductUpdateByIdQueryHandler, UpdateProductCommandHandler updateProductCommandHandler)
         {
             _getAllProductQueryHandler = getAllProductQueryHandler;
             _createProductCommandHandler = createProductCommandHandler;
             _getProductByIdQueryHandler = productByIdQueryHandler;
             _removeProductCommandHandler = removeProductCommandHandler;
             _getProductUpdateByIdQueryHandler = getProductUpdateByIdQueryHandler;
+            _updateProductCommandHandler = updateProductCommandHandler;
         }
 
         #endregion
@@ -62,6 +64,12 @@ namespace DesignPattern.CQRS.Controllers
         {
             var values = _getProductUpdateByIdQueryHandler.Handle(new GetProductUpdateByIdQuery(id));
             return View(values);
+        }
+        [HttpPost]
+        public IActionResult UpdateProduct(UpdateProductCommand command)
+        {
+            _updateProductCommandHandler.Handle(command);
+            return RedirectToAction("Index", "Default");
         }
     }
 }

@@ -1,5 +1,3 @@
-using DesignPattern.CQRS.DAL;
-using DesignPattern.CQRS.Handlers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DesignPattern.CQRS
+namespace DesignPattern.TemplateMethod
 {
     public class Startup
     {
@@ -25,14 +23,6 @@ namespace DesignPattern.CQRS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DBContext>();
-            services.AddScoped<GetAllProductQueryHandler>();
-            services.AddScoped<GetProductByIdQueryHandler>();
-            services.AddScoped<GetProductUpdateByIdQueryHandler>();
-            services.AddScoped<CreateProductCommandHandler>();
-            services.AddScoped<RemoveProductCommandHandler>();
-            services.AddScoped<UpdateProductCommandHandler>();
-
             services.AddControllersWithViews();
         }
 

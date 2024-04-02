@@ -1,0 +1,34 @@
+﻿@model NetflixPlans
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>BasicPlanIndex</title>
+</head>
+<body>
+    <div class="container">
+        <br />
+        @* <h3>Plan Adı: @ViewBag.planType</h3>
+        <h3>Kişi Sayısı: @ViewBag.personCount</h3>
+        <h3>Plan Fiyatı: @ViewBag.price</h3>
+        <h3>Plan İçeriği: @ViewBag.content</h3>
+        <h3>Çözünürlük: @ViewBag.resolution</h3> *@
+
+        <h3>Plan Adı: @Model.PlanType("Basic")</h3>
+        <h3>Kişi Sayısı: @Model.PersonCount(1) </h3>
+        <h3>Plan İçeriği: @Model.Content("Dizi-Film") </h3>
+        <h3>Çözünürlük: @Model.Resolution("720p")</h3>
+        <h3>Plan Fiyatı: @Model.Price(69.99)</h3>
+
+        <a asp-controller="Default" asp-action="StandartPlanIndex" class="btn btn-warning">Standart Plan</a>
+        <a asp-controller="Default" asp-action="UltraPlanIndex" class="btn btn-success">Ultra Plan</a>
+    </div>
+</body>
+</html>

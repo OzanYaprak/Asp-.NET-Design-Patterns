@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>UltraPlanIndex</title>
+</head>
+<body>
+    <div class="container">
+        <br />
+
+        <h3>Plan Adı: @Model.PlanType("Ultra")</h3>
+        <h3>Kişi Sayısı: @Model.PersonCount(4) </h3>
+        <h3>Plan İçeriği: @Model.Content("Dizi-Film-Belgesel-Tiyatro") </h3>
+        <h3>Çözünürlük: @Model.Resolution("1080p/4K")</h3>
+        <h3>Plan Fiyatı: @Model.Price(129.99)</h3>
+
+        <a asp-controller="Default" asp-action="BasicPlanIndex" class="btn btn-primary">Basic Plan</a>
+        <a asp-controller="Default" asp-action="StandartPlanIndex" class="btn btn-secondary">Standart Plan</a>
+    </div>
+</body>
+</html>

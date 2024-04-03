@@ -13,7 +13,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern.CQRS", "CQRSD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateMethodDesignPattern", "TemplateMethodDesignPattern", "{2E7CF19A-1A08-4309-8B77-AA6BFFEBB310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.TemplateMethod", "DesignPattern.TemplateMethod\DesignPattern.TemplateMethod.csproj", "{D35F0C26-32BF-4307-A9B0-97061A23B825}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern.TemplateMethod", "DesignPattern.TemplateMethod\DesignPattern.TemplateMethod.csproj", "{D35F0C26-32BF-4307-A9B0-97061A23B825}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ObserverDesignPattern", "ObserverDesignPattern", "{38917A90-CB23-4579-9CE5-8E4A7C967FB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Observer", "DesignPattern.Observer\DesignPattern.Observer.csproj", "{2E2A4DDD-C4ED-4B1D-99EF-36C83F7AAF23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitOfWorkDesignPattern", "UnitOfWorkDesignPattern", "{AD9670D3-1AE1-4AD8-BF32-96C3C7FCFD34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.UnitOfWork", "DesignPattern.UnitOfWork\DesignPattern.UnitOfWork.csproj", "{6AD118C9-5E13-42A5-869F-8B7A97987C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.EntityLayer", "UnitOfWorkDesignPattern\DesignPattern.EntityLayer\DesignPattern.EntityLayer.csproj", "{421DBFD0-D704-4C87-AABD-2B8702C8BC60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.DataAccessLayer", "UnitOfWorkDesignPattern\DesignPattern.DataAccessLayer\DesignPattern.DataAccessLayer.csproj", "{A5F274A4-80E1-4E85-999C-49FAF6B2B36A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.BusinessLayer", "UnitOfWorkDesignPattern\DesignPattern.BusinessLayer\DesignPattern.BusinessLayer.csproj", "{DE8879DA-2D1D-428A-AA35-D406844B5242}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +47,26 @@ Global
 		{D35F0C26-32BF-4307-A9B0-97061A23B825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D35F0C26-32BF-4307-A9B0-97061A23B825}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D35F0C26-32BF-4307-A9B0-97061A23B825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2A4DDD-C4ED-4B1D-99EF-36C83F7AAF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2A4DDD-C4ED-4B1D-99EF-36C83F7AAF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2A4DDD-C4ED-4B1D-99EF-36C83F7AAF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2A4DDD-C4ED-4B1D-99EF-36C83F7AAF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD118C9-5E13-42A5-869F-8B7A97987C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD118C9-5E13-42A5-869F-8B7A97987C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD118C9-5E13-42A5-869F-8B7A97987C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD118C9-5E13-42A5-869F-8B7A97987C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{421DBFD0-D704-4C87-AABD-2B8702C8BC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421DBFD0-D704-4C87-AABD-2B8702C8BC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421DBFD0-D704-4C87-AABD-2B8702C8BC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421DBFD0-D704-4C87-AABD-2B8702C8BC60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F274A4-80E1-4E85-999C-49FAF6B2B36A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F274A4-80E1-4E85-999C-49FAF6B2B36A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F274A4-80E1-4E85-999C-49FAF6B2B36A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F274A4-80E1-4E85-999C-49FAF6B2B36A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE8879DA-2D1D-428A-AA35-D406844B5242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE8879DA-2D1D-428A-AA35-D406844B5242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE8879DA-2D1D-428A-AA35-D406844B5242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE8879DA-2D1D-428A-AA35-D406844B5242}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +75,11 @@ Global
 		{9A1C72A6-BC16-4458-B05E-45B30500163B} = {D78B90A7-1D15-4AA5-A722-DF74D7BA6372}
 		{50BD8821-DBE3-4251-BD97-4E1EA780259F} = {AB5FD523-B2EA-4D8E-8D0C-B491F29590C4}
 		{D35F0C26-32BF-4307-A9B0-97061A23B825} = {2E7CF19A-1A08-4309-8B77-AA6BFFEBB310}
+		{2E2A4DDD-C4ED-4B1D-99EF-36C83F7AAF23} = {38917A90-CB23-4579-9CE5-8E4A7C967FB8}
+		{6AD118C9-5E13-42A5-869F-8B7A97987C8C} = {AD9670D3-1AE1-4AD8-BF32-96C3C7FCFD34}
+		{421DBFD0-D704-4C87-AABD-2B8702C8BC60} = {AD9670D3-1AE1-4AD8-BF32-96C3C7FCFD34}
+		{A5F274A4-80E1-4E85-999C-49FAF6B2B36A} = {AD9670D3-1AE1-4AD8-BF32-96C3C7FCFD34}
+		{DE8879DA-2D1D-428A-AA35-D406844B5242} = {AD9670D3-1AE1-4AD8-BF32-96C3C7FCFD34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE4E021-ABDA-46FF-B2E8-D398FA54FEA8}

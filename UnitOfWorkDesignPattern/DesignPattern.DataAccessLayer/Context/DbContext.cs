@@ -10,9 +10,11 @@ namespace DesignPattern.DataAccessLayer.Context
 {
     public class DBContext : DbContext
     {
-        public DBContext(DbContextOptions<DBContext> options) : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer("server=(localdb)\\mssqllocaldb;initial catalog=DbObserverDesignPattern; integrated security=true;");
         }
+
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Process> Processes { get; set; }
     }

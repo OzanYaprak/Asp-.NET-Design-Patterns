@@ -1,0 +1,39 @@
+﻿@model CustomerViewModel
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+
+    <!-- #region UyarıMesajları -->
+    
+    @if (!string.IsNullOrEmpty(ViewBag.BakiyeYetersiz) || !string.IsNullOrEmpty(ViewBag.FazlaMiktarGonderim))
+    {
+        <div class="alert alert-danger" role="alert">
+            @if (!string.IsNullOrEmpty(ViewBag.BakiyeYetersiz))
+            {
+                <p>@ViewBag.BakiyeYetersiz</p>
+            }
+            @if (!string.IsNullOrEmpty(ViewBag.FazlaMiktarGonderim))
+            {
+                <p>@ViewBag.FazlaMiktarGonderim</p>
+            }
+        </div>
+    }
+
+    <!-- #endregion -->
+
+    <form asp-controller="Default" asp-action="Index" method="post">
+        <label>Gönderici ID</label>
+        <input type="text" asp-for="SenderId" class="form-control" />
+        <br />
+        <label>Alıcı ID</label>
+        <input type="text" asp-for="ReceiverId" class="form-control" />
+        <br />
+        <label>Miktar</label>
+        <input type="text" asp-for="Amount" class="form-control" />
+        <br />
+        <button type="submit" class="btn btn-primary">Gönder</button>
+    </form>
+</div>

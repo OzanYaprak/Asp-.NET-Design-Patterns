@@ -12,7 +12,7 @@ namespace DesignPattern.DataAccessLayer.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=(localdb)\\mssqllocaldb;initial catalog=DbObserverDesignPattern; integrated security=true;");
+            optionsBuilder.UseSqlServer("server=(localdb)\\mssqllocaldb;initial catalog=DbUnitOfWorkDesignPattern; integrated security=true;");
         }
 
         public DbSet<Customer> Customers { get; set; }

@@ -1,14 +1,15 @@
-﻿@model UpdateProductByIdResult
+﻿@model CreateProductCommand
 @{
     Layout = null;
 }
+
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 <div class="container">
     <br /><br />
-    <form asp-controller="Product" asp-action="UpdateProduct" method="post">
-        <label>Ürün ID</label>
-        <input type="text" disabled asp-for="ProductId" class="form-control" />
-        <br />
+    <form asp-controller="Product" asp-action="CreateProduct" method="post">
+        @* <label>Ürün ID</label>
+        <input type="text" disabled asp-for="Pro" class="form-control" />
+        <br /> *@
         <label>Ürün Adı</label>
         <input type="text" asp-for="ProductName" class="form-control" />
         <br />
@@ -24,6 +25,6 @@
         <label>Ürün Kategorisi</label>
         <input type="text" asp-for="ProductCategory" class="form-control" />
         <br />
-        <button type="submit" class="btn btn-primary">Ürünü Güncelle</button>
+        <button type="submit" class="btn btn-primary">Ürünü Ekle</button>
     </form>
 </div>

@@ -39,7 +39,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern.Mediator", "M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IteratorDesignPattern", "IteratorDesignPattern", "{FEA8470C-B7B7-4E66-BBF7-7AF9E1A75060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Iterator", "Iterator\DesignPattern.Iterator\DesignPattern.Iterator.csproj", "{F2F22913-D09F-4BE9-AFBA-8F8896195B6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern.Iterator", "Iterator\DesignPattern.Iterator\DesignPattern.Iterator.csproj", "{F2F22913-D09F-4BE9-AFBA-8F8896195B6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FacadeDesignPattern", "FacadeDesignPattern", "{AB7C1BB3-62DD-4F75-8F79-C19EC738E2F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Facade", "Facade\DesignPattern.Facade\DesignPattern.Facade.csproj", "{99192033-2943-4F90-9DC9-DBA65BAB1180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +95,10 @@ Global
 		{F2F22913-D09F-4BE9-AFBA-8F8896195B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2F22913-D09F-4BE9-AFBA-8F8896195B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2F22913-D09F-4BE9-AFBA-8F8896195B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99192033-2943-4F90-9DC9-DBA65BAB1180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99192033-2943-4F90-9DC9-DBA65BAB1180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99192033-2943-4F90-9DC9-DBA65BAB1180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99192033-2943-4F90-9DC9-DBA65BAB1180}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +115,7 @@ Global
 		{A1ED2341-1E77-4B63-A228-8CC3D08BF8DE} = {6D8D117A-253F-46F8-9F70-471AB3350FA7}
 		{A12A06C2-100E-43FA-BD85-BD598FD56F53} = {9BF6103B-0757-4D12-9E34-89016302CFD3}
 		{F2F22913-D09F-4BE9-AFBA-8F8896195B6D} = {FEA8470C-B7B7-4E66-BBF7-7AF9E1A75060}
+		{99192033-2943-4F90-9DC9-DBA65BAB1180} = {AB7C1BB3-62DD-4F75-8F79-C19EC738E2F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFE4E021-ABDA-46FF-B2E8-D398FA54FEA8}
